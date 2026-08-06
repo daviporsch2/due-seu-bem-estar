@@ -283,10 +283,10 @@ function Index() {
         <section id="espaco" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <div className="grid gap-14 md:grid-cols-[1.15fr_1fr] md:items-center">
             <img
-              src={espaco}
-              alt="Ambiente acolhedor da recepção da clínica DUE"
-              width={1408}
-              height={1008}
+              src={espacoAsset.url}
+              alt="Profissional da clínica DUE Osteopatia e Movimento"
+              width={1080}
+              height={1350}
               loading="lazy"
               className="shadow-soft w-full rounded-sm object-cover"
             />
