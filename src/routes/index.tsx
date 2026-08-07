@@ -42,6 +42,7 @@ export const Route = createFileRoute("/")({
 });
 
 const WHATS = "https://wa.me/5586988764383";
+const INSTA = "https://www.instagram.com/dueteresina/";
 
 const nav = [
   { label: "A clínica", href: "#clinica" },
@@ -139,15 +140,27 @@ function Index() {
               </a>
             ))}
           </nav>
-          <a
-            href={WHATS}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Agendar
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </a>
+          <div className="flex items-center gap-2">
+            <a
+              href={INSTA}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram da DUE"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-brass/50 text-brass transition-colors hover:bg-brass hover:text-primary-foreground"
+            >
+              <Instagram className="h-4 w-4" />
+            </a>
+            <a
+              href={WHATS}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              Agendar
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </a>
+          </div>
+
         </div>
       </header>
 
@@ -365,32 +378,55 @@ function Index() {
                 <ArrowUpRight className="h-4 w-4" />
               </a>
             </div>
-            <dl className="divide-y divide-border border-y border-border">
-              {[
-                {
-                  icon: MapPin,
-                  t: "Endereço",
-                  c: "Rua Napoleão Lima, 1676 — Jóquei, Teresina - PI, 64049-220",
-                },
-                { icon: Phone, t: "Telefones", c: "(86) 3233-6545 · (86) 98876-4383" },
-                {
-                  icon: Clock,
-                  t: "Horários",
-                  c: "Segunda a sexta: 7h às 20h · Sábado: 8h às 12h",
-                },
-                { icon: Instagram, t: "Instagram", c: "@dueteresina" },
-              ].map(({ icon: Icon, t, c }) => (
-                <div key={t} className="flex gap-5 py-7">
-                  <Icon className="mt-1 h-5 w-5 shrink-0 text-brass" strokeWidth={1.25} />
-                  <div>
-                    <dt className="text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">
-                      {t}
-                    </dt>
-                    <dd className="mt-2 text-base leading-relaxed">{c}</dd>
+            <div>
+              <dl className="divide-y divide-border border-y border-border">
+                {[
+                  {
+                    icon: MapPin,
+                    t: "Endereço",
+                    c: "Rua Napoleão Lima, 1676 — Jóquei, Teresina - PI, 64049-220",
+                  },
+                  { icon: Phone, t: "WhatsApp", c: "+55 (86) 98876-4383" },
+                  {
+                    icon: Clock,
+                    t: "Horários",
+                    c: "Segunda a sexta: 7h às 20h · Sábado: 8h às 12h",
+                  },
+                ].map(({ icon: Icon, t, c }) => (
+                  <div key={t} className="flex gap-5 py-7">
+                    <Icon className="mt-1 h-5 w-5 shrink-0 text-brass" strokeWidth={1.25} />
+                    <div>
+                      <dt className="text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">
+                        {t}
+                      </dt>
+                      <dd className="mt-2 text-base leading-relaxed">{c}</dd>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </dl>
+                ))}
+              </dl>
+
+              <a
+                href={INSTA}
+                target="_blank"
+                rel="noreferrer"
+                className="shadow-soft group mt-10 flex items-center gap-5 rounded-sm bg-deep p-6 text-deep-foreground transition-transform hover:-translate-y-0.5"
+              >
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-brass/60">
+                  <Instagram className="h-6 w-6 text-brass" strokeWidth={1.25} />
+                </span>
+                <span className="flex-1">
+                  <span className="block text-[0.65rem] uppercase tracking-[0.22em] text-brass">
+                    Siga no Instagram
+                  </span>
+                  <span className="mt-1 block font-display text-2xl">@dueteresina</span>
+                  <span className="mt-1 block text-xs text-deep-foreground/70">
+                    6,8 mil seguidores · dicas, bastidores e novidades
+                  </span>
+                </span>
+                <ArrowUpRight className="h-5 w-5 shrink-0 text-brass transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
+
           </div>
           <div className="mt-16 overflow-hidden rounded-sm border border-border">
             <iframe
@@ -411,19 +447,20 @@ function Index() {
               Osteopatia · Fisioterapia · Pilates
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
             <a
-              href="https://www.instagram.com/dueteresina"
+              href={INSTA}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 transition-colors hover:text-primary"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-90"
             >
               <Instagram className="h-4 w-4" /> @dueteresina
             </a>
-            <a href="tel:+558632336545" className="transition-colors hover:text-primary">
-              (86) 3233-6545
+            <a href="tel:+5586988764383" className="transition-colors hover:text-primary">
+              +55 (86) 98876-4383
             </a>
           </div>
+
         </div>
         <p className="mx-auto mt-8 max-w-6xl px-6 text-xs text-muted-foreground">
           © {new Date().getFullYear()} DUE Osteopatia e Movimento — Teresina, PI.
