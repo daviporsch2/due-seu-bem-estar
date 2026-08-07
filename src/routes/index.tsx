@@ -144,7 +144,7 @@ function Index() {
             <a
               href={INSTA}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label="Instagram da DUE"
               className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-brass/50 text-brass transition-colors hover:bg-brass hover:text-primary-foreground"
             >
@@ -153,7 +153,7 @@ function Index() {
             <a
               href={WHATS}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-90"
             >
               Agendar
@@ -190,7 +190,7 @@ function Index() {
               <a
                 href={WHATS}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-background px-7 py-3.5 text-xs uppercase tracking-[0.2em] text-primary transition-transform hover:-translate-y-0.5"
               >
                 Agendar avaliação
@@ -371,7 +371,7 @@ function Index() {
               <a
                 href={WHATS}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="mt-10 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-xs uppercase tracking-[0.2em] text-primary-foreground transition-transform hover:-translate-y-0.5"
               >
                 Agendar pelo WhatsApp
@@ -408,7 +408,7 @@ function Index() {
               <a
                 href={INSTA}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="shadow-soft group mt-10 flex items-center gap-5 rounded-sm bg-deep p-6 text-deep-foreground transition-transform hover:-translate-y-0.5"
               >
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-brass/60">
@@ -451,7 +451,7 @@ function Index() {
             <a
               href={INSTA}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-90"
             >
               <Instagram className="h-4 w-4" /> @dueteresina
