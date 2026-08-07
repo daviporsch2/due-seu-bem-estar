@@ -435,19 +435,20 @@ function Index() {
               Osteopatia · Fisioterapia · Pilates
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
             <a
-              href="https://www.instagram.com/dueteresina"
+              href={INSTA}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 transition-colors hover:text-primary"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-90"
             >
               <Instagram className="h-4 w-4" /> @dueteresina
             </a>
-            <a href="tel:+558632336545" className="transition-colors hover:text-primary">
-              (86) 3233-6545
+            <a href="tel:+5586988764383" className="transition-colors hover:text-primary">
+              +55 (86) 98876-4383
             </a>
           </div>
+
         </div>
         <p className="mx-auto mt-8 max-w-6xl px-6 text-xs text-muted-foreground">
           © {new Date().getFullYear()} DUE Osteopatia e Movimento — Teresina, PI.
