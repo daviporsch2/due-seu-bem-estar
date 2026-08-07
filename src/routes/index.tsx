@@ -140,15 +140,27 @@ function Index() {
               </a>
             ))}
           </nav>
-          <a
-            href={WHATS}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Agendar
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </a>
+          <div className="flex items-center gap-2">
+            <a
+              href={INSTA}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram da DUE"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-brass/50 text-brass transition-colors hover:bg-brass hover:text-primary-foreground"
+            >
+              <Instagram className="h-4 w-4" />
+            </a>
+            <a
+              href={WHATS}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              Agendar
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </a>
+          </div>
+
         </div>
       </header>
 
