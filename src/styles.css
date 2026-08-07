@@ -166,3 +166,7 @@
     transform: none;
   }
 }
+
+#lovable-badge {
+  display: none !important;
+}
