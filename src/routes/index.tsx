@@ -42,6 +42,7 @@ export const Route = createFileRoute("/")({
 });
 
 const WHATS = "https://wa.me/5586988764383";
+const INSTA = "https://www.instagram.com/dueteresina/";
 
 const nav = [
   { label: "A clínica", href: "#clinica" },
