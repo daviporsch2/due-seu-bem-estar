@@ -17,7 +17,7 @@ import {
 import heroClinica from "@/assets/hero-clinica.jpg";
 import osteopatia from "@/assets/osteopatia.jpg";
 import pilates from "@/assets/pilates.jpg";
-import espacoAsset from "@/assets/espaco.png.asset.json";
+import dueStoryAsset from "@/assets/due-story.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
