@@ -479,7 +479,7 @@ function Index() {
                     c: "Segunda a sexta: 7h às 20h · Sábado: 8h às 12h",
                   },
                 ].map(({ icon: Icon, t, c }) => (
-                  <div key={t} className="lift flex gap-5 py-7">
+                  <div key={t} className="flex gap-5 py-7 transition-colors hover:bg-accent/40">
                     <Icon className="tap mt-1 h-5 w-5 shrink-0 text-brass" strokeWidth={1.25} />
                     <div>
                       <dt className="text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">
