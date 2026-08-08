@@ -242,7 +242,7 @@ function Index() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram da DUE"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-brass/50 text-brass transition-colors hover:bg-brass hover:text-primary-foreground"
+              className="tap inline-flex h-10 w-10 items-center justify-center rounded-full border border-brass/50 text-brass transition-colors hover:bg-brass hover:text-primary-foreground"
             >
               <Instagram className="h-4 w-4" />
             </a>
@@ -250,7 +250,7 @@ function Index() {
               href={WHATS}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-90"
+              className="btn-shine inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-90"
             >
               Agendar
               <ArrowUpRight className="h-3.5 w-3.5" />
@@ -287,14 +287,14 @@ function Index() {
                 href={WHATS}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-background px-7 py-3.5 text-xs uppercase tracking-[0.2em] text-primary transition-transform hover:-translate-y-0.5"
+                className="btn-shine inline-flex items-center gap-2 rounded-full bg-background px-7 py-3.5 text-xs uppercase tracking-[0.2em] text-primary transition-transform hover:-translate-y-0.5"
               >
                 Agendar avaliação
                 <ArrowUpRight className="h-4 w-4" />
               </a>
               <a
                 href="#tratamentos"
-                className="inline-flex items-center gap-2 rounded-full border border-deep-foreground/40 px-7 py-3.5 text-xs uppercase tracking-[0.2em] text-deep-foreground transition-colors hover:border-brass hover:text-brass"
+                className="btn-shine inline-flex items-center gap-2 rounded-full border border-deep-foreground/40 px-7 py-3.5 text-xs uppercase tracking-[0.2em] text-deep-foreground transition-colors hover:border-brass hover:text-brass"
               >
                 Nossos tratamentos
               </a>
