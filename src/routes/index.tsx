@@ -17,7 +17,7 @@ import {
 import heroClinica from "@/assets/hero-clinica.jpg";
 import osteopatia from "@/assets/osteopatia.jpg";
 import pilates from "@/assets/pilates.jpg";
-import dueStoryAsset from "@/assets/due-story-generated.png.asset.json";
+import dueStory from "@/assets/due-story-generated.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -296,7 +296,7 @@ function Index() {
         <section id="espaco" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <div className="grid gap-14 md:grid-cols-[1.15fr_1fr] md:items-center">
             <img
-              src={dueStoryAsset.url}
+              src={dueStory}
               alt="Você está tratando a dor ou só tapando ela? Due Osteopatia com você em 2026"
               width={1080}
               height={1350}
