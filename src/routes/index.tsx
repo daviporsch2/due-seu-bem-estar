@@ -279,18 +279,8 @@ function Index() {
                 Técnicas seguras, conduzidas por quem entende do seu corpo
               </h2>
             </div>
-            <div className="mt-16 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-              {tratamentos.map(({ icon: Icon, nome, texto }) => (
-                <article
-                  key={nome}
-                  className="group bg-card p-9 transition-colors hover:bg-accent/50"
-                >
-                  <Icon className="h-6 w-6 text-brass" strokeWidth={1.25} />
-                  <h3 className="mt-6 font-display text-2xl">{nome}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{texto}</p>
-                </article>
-              ))}
-            </div>
+
+            <TratamentosTabs />
           </div>
         </section>
 
