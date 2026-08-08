@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { AnimatePresence, motion } from "motion/react";
+import { useState } from "react";
 import {
   Activity,
   ArrowUpRight,
@@ -117,6 +119,100 @@ const depoimentos = [
       "Sofria com dor na mandíbula e enxaqueca. O cuidado da equipe mudou minha rotina — indico a DUE para todo mundo em Teresina.",
   },
 ];
+
+function TratamentosTabs() {
+  const [active, setActive] = useState(0);
+  const t = tratamentos[active]!;
+  const ActiveIcon = t.icon;
+
+  return (
+    <div className="mt-16">
+      {/* Barra de abas */}
+      <div
+        role="tablist"
+        aria-label="Tratamentos da DUE"
+        className="flex flex-wrap gap-2 border-b border-border pb-px sm:gap-3"
+      >
+        {tratamentos.map((item, i) => {
+          const ItemIcon = item.icon;
+          const selected = i === active;
+          return (
+            <button
+              key={item.nome}
+              role="tab"
+              aria-selected={selected}
+              onClick={() => setActive(i)}
+              className={`relative flex items-center gap-2 rounded-t-md px-4 py-3 text-xs uppercase tracking-[0.14em] transition-colors sm:text-sm ${
+                selected
+                  ? "text-primary"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <ItemIcon className="h-4 w-4" strokeWidth={1.25} />
+              <span className="whitespace-nowrap">{item.nome.split(" ")[0]}</span>
+              {selected && (
+                <motion.span
+                  layoutId="tab-indicator"
+                  className="absolute inset-x-0 -bottom-px h-0.5 bg-brass"
+                  transition={{ type: "spring", stiffness: 420, damping: 32 }}
+                />
+              )}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Conteúdo animado */}
+      <div className="relative min-h-[14rem] overflow-hidden rounded-sm border border-border bg-card p-9 md:p-12">
+        <AnimatePresence mode="wait">
+          <motion.article
+            key={active}
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col items-start"
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ type: "spring", stiffness: 380, damping: 18, delay: 0.05 }}
+            >
+              <ActiveIcon className="h-8 w-8 text-brass" strokeWidth={1.25} />
+            </motion.div>
+            <h3 className="mt-6 font-display text-3xl md:text-4xl">{t.nome}</h3>
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
+              {t.texto}
+            </p>
+          </motion.article>
+        </AnimatePresence>
+      </div>
+
+      {/* Navegação entre abas */}
+      <div className="mt-5 flex items-center justify-between text-sm text-muted-foreground">
+        <button
+          onClick={() => setActive((a) => (a - 1 + tratamentos.length) % tratamentos.length)}
+          className="inline-flex items-center gap-2 transition-colors hover:text-primary"
+          aria-label="Tratamento anterior"
+        >
+          <ArrowUpRight className="h-4 w-4 rotate-[-135deg]" />
+          Anterior
+        </button>
+        <span className="text-xs tracking-[0.18em]">
+          {String(active + 1).padStart(2, "0")} / {String(tratamentos.length).padStart(2, "0")}
+        </span>
+        <button
+          onClick={() => setActive((a) => (a + 1) % tratamentos.length)}
+          className="inline-flex items-center gap-2 transition-colors hover:text-primary"
+          aria-label="Próximo tratamento"
+        >
+          Próximo
+          <ArrowUpRight className="h-4 w-4" />
+        </button>
+      </div>
+    </div>
+  );
+}
 
 function Index() {
   return (
@@ -277,18 +373,8 @@ function Index() {
                 Técnicas seguras, conduzidas por quem entende do seu corpo
               </h2>
             </div>
-            <div className="mt-16 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-              {tratamentos.map(({ icon: Icon, nome, texto }) => (
-                <article
-                  key={nome}
-                  className="group bg-card p-9 transition-colors hover:bg-accent/50"
-                >
-                  <Icon className="h-6 w-6 text-brass" strokeWidth={1.25} />
-                  <h3 className="mt-6 font-display text-2xl">{nome}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{texto}</p>
-                </article>
-              ))}
-            </div>
+
+            <TratamentosTabs />
           </div>
         </section>
 
