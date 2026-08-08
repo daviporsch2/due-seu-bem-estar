@@ -242,7 +242,7 @@ function Index() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram da DUE"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-brass/50 text-brass transition-colors hover:bg-brass hover:text-primary-foreground"
+              className="tap inline-flex h-10 w-10 items-center justify-center rounded-full border border-brass/50 text-brass transition-colors hover:bg-brass hover:text-primary-foreground"
             >
               <Instagram className="h-4 w-4" />
             </a>
@@ -250,7 +250,7 @@ function Index() {
               href={WHATS}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-90"
+              className="btn-shine inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-90"
             >
               Agendar
               <ArrowUpRight className="h-3.5 w-3.5" />
@@ -287,14 +287,14 @@ function Index() {
                 href={WHATS}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-background px-7 py-3.5 text-xs uppercase tracking-[0.2em] text-primary transition-transform hover:-translate-y-0.5"
+                className="btn-shine inline-flex items-center gap-2 rounded-full bg-background px-7 py-3.5 text-xs uppercase tracking-[0.2em] text-primary transition-transform hover:-translate-y-0.5"
               >
                 Agendar avaliação
                 <ArrowUpRight className="h-4 w-4" />
               </a>
               <a
                 href="#tratamentos"
-                className="inline-flex items-center gap-2 rounded-full border border-deep-foreground/40 px-7 py-3.5 text-xs uppercase tracking-[0.2em] text-deep-foreground transition-colors hover:border-brass hover:text-brass"
+                className="btn-shine inline-flex items-center gap-2 rounded-full border border-deep-foreground/40 px-7 py-3.5 text-xs uppercase tracking-[0.2em] text-deep-foreground transition-colors hover:border-brass hover:text-brass"
               >
                 Nossos tratamentos
               </a>
@@ -350,7 +350,7 @@ function Index() {
                 width={1200}
                 height={1408}
                 loading="lazy"
-                className="shadow-soft h-full w-full rounded-sm object-cover"
+                className="lift shadow-soft h-full w-full rounded-sm object-cover"
               />
               <img
                 src={pilates}
@@ -358,7 +358,7 @@ function Index() {
                 width={1200}
                 height={1408}
                 loading="lazy"
-                className="shadow-soft mt-10 h-full w-full rounded-sm object-cover"
+                className="lift shadow-soft mt-10 h-full w-full rounded-sm object-cover"
               />
             </div>
           </div>
@@ -387,7 +387,7 @@ function Index() {
               width={1080}
               height={1350}
               loading="lazy"
-              className="shadow-soft w-full rounded-sm object-cover"
+              className="lift shadow-soft w-full rounded-sm object-cover"
             />
             <div>
               <p className="eyebrow">O espaço</p>
@@ -424,7 +424,7 @@ function Index() {
               {depoimentos.map((d) => (
                 <figure
                   key={d.nome}
-                  className="flex h-full flex-col justify-between rounded-sm border border-deep-foreground/15 p-9"
+                  className="lift flex h-full flex-col justify-between rounded-sm border border-deep-foreground/15 p-9"
                 >
                   <Quote className="h-6 w-6 text-brass" strokeWidth={1.25} />
                   <blockquote className="mt-6 font-display text-xl italic leading-relaxed">
@@ -458,7 +458,7 @@ function Index() {
                 href={WHATS}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-10 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-xs uppercase tracking-[0.2em] text-primary-foreground transition-transform hover:-translate-y-0.5"
+                className="btn-shine mt-10 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-xs uppercase tracking-[0.2em] text-primary-foreground transition-transform hover:-translate-y-0.5"
               >
                 Agendar pelo WhatsApp
                 <ArrowUpRight className="h-4 w-4" />
@@ -479,8 +479,8 @@ function Index() {
                     c: "Segunda a sexta: 7h às 20h · Sábado: 8h às 12h",
                   },
                 ].map(({ icon: Icon, t, c }) => (
-                  <div key={t} className="flex gap-5 py-7">
-                    <Icon className="mt-1 h-5 w-5 shrink-0 text-brass" strokeWidth={1.25} />
+                  <div key={t} className="flex gap-5 py-7 transition-colors hover:bg-accent/40">
+                    <Icon className="tap mt-1 h-5 w-5 shrink-0 text-brass" strokeWidth={1.25} />
                     <div>
                       <dt className="text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">
                         {t}
@@ -495,7 +495,7 @@ function Index() {
                 href={INSTA}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shadow-soft group mt-10 flex items-center gap-5 rounded-sm bg-deep p-6 text-deep-foreground transition-transform hover:-translate-y-0.5"
+                className="btn-shine shadow-soft group mt-10 flex items-center gap-5 rounded-sm bg-deep p-6 text-deep-foreground transition-transform hover:-translate-y-0.5"
               >
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-brass/60">
                   <Instagram className="h-6 w-6 text-brass" strokeWidth={1.25} />
@@ -538,11 +538,11 @@ function Index() {
               href={INSTA}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-90"
+              className="btn-shine inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-opacity hover:opacity-90"
             >
               <Instagram className="h-4 w-4" /> @dueteresina
             </a>
-            <a href="tel:+5586988764383" className="transition-colors hover:text-primary">
+            <a href="tel:+5586988764383" className="tap transition-colors hover:text-primary">
               +55 (86) 98876-4383
             </a>
           </div>
