@@ -230,7 +230,7 @@ function Index() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                className="nav-shimmer text-sm"
               >
                 {item.label}
               </a>
