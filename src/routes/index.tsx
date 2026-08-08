@@ -122,7 +122,7 @@ const depoimentos = [
 
 function TratamentosTabs() {
   const [active, setActive] = useState(0);
-  const t = tratamentos[active];
+  const t = tratamentos[active]!;
   const ActiveIcon = t.icon;
 
   return (
